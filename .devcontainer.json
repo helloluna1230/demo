@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "build": "pip install Flask",
+    "launch": "pip install Flask && python app.py"
+  }
+}
