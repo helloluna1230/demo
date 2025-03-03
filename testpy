@@ -1,0 +1,9 @@
+import sqlite3
+ 
+username = request.args.get('username')
+password = request.args.get('password')
+ 
+conn = sqlite3.connect('database.db')
+cursor = conn.cursor()
+cursor.execute("SELECT * FROM users WHERE username = '%s' AND password = '%s'" % (username, password))
+result = cursor.fetchone()
