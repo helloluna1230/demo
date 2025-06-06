@@ -3,6 +3,8 @@
 
 ## How to Run the Flask Application
 
+### Option 1: Manual Setup
+
 1. Make sure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
 
 2. Install Flask using pip:
@@ -20,6 +22,24 @@
    ```
 
 6. Open a web browser and go to `http://127.0.0.1:5000/` to access the Rock Paper Scissors game.
+
+### Option 2: Docker Deployment
+
+1. Make sure you have Docker installed on your system. You can download it from [docker.com](https://www.docker.com/).
+
+2. Build the Docker image:
+   ```
+   docker build -t rock-paper-scissors .
+   ```
+
+3. Run the Docker container:
+   ```
+   docker run -p 5000:5000 rock-paper-scissors
+   ```
+
+4. Open a web browser and go to `http://localhost:5000/` to access the Rock Paper Scissors game.
+
+To stop the container, press `Ctrl+C` in the terminal where the container is running.
 
 ## 3-Round Match Rule
 
